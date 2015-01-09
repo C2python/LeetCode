@@ -1,0 +1,14 @@
+# LeetCode
+Just the algorithm in Leetcode
+class Solution{
+  public:
+    int ladderLength(string start, string end, unordered_set<string> &dict){
+      queue<string> ladder;
+      ladder.push(start);
+      ladder.push("");
+      int length=1;
+      while(ladder.empty()==fasle){
+        
+      }
+    }
+}
