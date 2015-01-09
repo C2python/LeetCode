@@ -8,7 +8,11 @@ class Solution{
       ladder.push("");
       int length=1;
       while(ladder.empty()==fasle){
-        
+        string str = ladder.front();
+        ladder.pop();
+        if(str != ""){
+          
+        }
       }
     }
 }
