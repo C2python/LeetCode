@@ -6,13 +6,32 @@ class Solution{
       queue<string> ladder;
       ladder.push(start);
       ladder.push("");
-      int length=1;
+      int strlen=1;
       while(ladder.empty()==fasle){
         string str = ladder.front();
         ladder.pop();
+        string tmp;
         if(str != ""){
-          
+          strlen = str.size();
+          for(int i =0 ; i<length;i++){
+            tmp = str;
+            for(char c='a';c<='z';c++){
+              if(str[i]=c)continue;
+              str[i]=c;
+              if(str=end) return res+1;
+              if(dict.find(str)==dict.end()){
+                ladder.push(str);
+                dict.erase(str);
+              }
+            }
+            str = tmp;
+          }
+        }
+        else if(ladder.empty()==false){
+          res++
+          ladder.push("");
         }
       }
+      return res;
     }
 }
