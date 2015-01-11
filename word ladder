@@ -7,7 +7,7 @@ class Solution{
       ladder.push(start);
       ladder.push("");
       int strlen=1;
-      while(ladder.empty()==fasle){
+      while(ladder.empty()==false){
         string str = ladder.front();
         ladder.pop();
         string tmp;
@@ -32,6 +32,6 @@ class Solution{
           ladder.push("");
         }
       }
-      return res;
+      return 0;
     }
 }
