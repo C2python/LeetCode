@@ -28,7 +28,7 @@ class Solution{
           }
         }
         else if(ladder.empty()==false){
-          res++
+          res++;
           ladder.push("");
         }
       }
