@@ -1,0 +1,25 @@
+class Solution(object):
+    def isPalindrome(self, x):
+        """
+        :type x: int
+        :rtype: bool
+        """
+        if x<0:
+            return False
+        length = 0
+        temp = x
+        while temp>0:
+            temp = temp/10
+            length=length+1
+        i = 0
+        j = length-1
+        while i<j:
+            prev = x/pow(10,j)
+            prev = prev%10
+            suff = x%pow(10,i+1)
+            suff = suff/pow(10,i)
+            if prev!=suff:
+                return False
+            i=i+1
+            j=j-1
+        return True
