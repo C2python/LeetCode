@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<int> twoSum(vector<int> &numbers, int target) {
+        int i=0,j=0;
+        int temp;
+        vector<int> result;
+        result.clear();
+        map<int,int> hmap;
+        for(;i<numbers.size();i++){
+            if(!hmap.count(numbers.at(i))){
+                hmap.insert(pair<int,int>(numbers.at(i),i));
+            }
+            if(hmap.count(target-numbers.at(i))){
+                temp = target-numbers.at(i);
+                j= hmap[temp];
+                if(j<i){
+                    result.push_back(j+1);
+                    result.push_back(i+1);
+                    return result;
+                }
+            }
+        }
+        return result;
+    }
+};
